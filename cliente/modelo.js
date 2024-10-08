@@ -1,28 +1,31 @@
 function Sistema(){
-    this.usuarios=[]; //que tipo de coleccion???
-    //operaciones sobre la coleccion
-    this.agregarUsuario = function(nick){
-        if(!this.usuarios[nick]){
-            this.usuarios[nick] = new Usuario (nick);
+    this.usuarios={}; // que tipo coleccion???
+    //operaciones sobre la colección
+    this.agregarUsuario=function(nick){
+        if (!this.usuarios[nick]){
+            this.usuarios[nick]=new Usuario(nick);
         }
     }
-    this.eliminarUsuario = function(nick){
-        res = false
-        if(this.usuarios[nick]){
+    this.eliminarUsuario=function(nick){
+        if (this.usuarios[nick]){
             delete this.usuarios[nick];
-            res = true;
+            console.log(Usuario, "eliminado");
         }
-        return res;
-    }   
-    this.obtenerUsuarios = function(){
-        return this.usuarios
+        else{
+            console.log("El usuario no existe.");
+        }
     }
-    this.usuarioActivo(nick) = function(){
-        return this.usuarios[nick]!=undefined;
-    }
-    this.numeroUsuarios = function(){
-        return Object.keys(this.usuarios).length;
-    }
+    this.obtenerUsuarios=function(){
+        return this.usuarios;
+        }
+    this.usuarioActivo = function(nick) {
+        return !!this.usuarios[nick]; // Devuelve true si el usuario existe, false en caso contrario
+        };
+    this.numeroUsuarios = function() {
+        return Object.keys(this.usuarios).length; // Cuenta las claves en el objeto usuarios
+        };
+        
+        
 }
 
 function Usuario(nick){
