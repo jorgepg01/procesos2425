@@ -14,6 +14,15 @@ function Sistema(){
         }
         return res;
     }   
+    this.obtenerUsuarios = function(){
+        return this.usuarios
+    }
+    this.usuarioActivo(nick) = function(){
+        return this.usuarios[nick]!=undefined;
+    }
+    this.numeroUsuarios = function(){
+        return Object.keys(this.usuarios).length;
+    }
 }
 
 function Usuario(nick){
