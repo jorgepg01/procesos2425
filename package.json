@@ -4,8 +4,13 @@
   "description": "Proyecto Procesos de Ingeniería del Software del curso 24-25. Jorge Pérez Gala",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testW": "node_modules\\.bin\\jasmine-node servidor",
+    "test": "./node_modules/.bin/jasmine-node servidor"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "jasmine-node": "^3.0.0"
+  }
 }
