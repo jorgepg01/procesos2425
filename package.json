@@ -4,6 +4,7 @@
   "description": "Proyecto Procesos de Ingeniería del Software del curso 24-25. Jorge Pérez Gala",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "testW": "node_modules\\.bin\\jasmine-node servidor",
     "test": "./node_modules/.bin/jasmine-node servidor"
   },
