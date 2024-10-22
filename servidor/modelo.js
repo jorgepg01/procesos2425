@@ -26,16 +26,15 @@ this.eliminarUsuario = function (nick) {
     return res;
 }
 this.obtenerUsuarios = function () {
-    return this.usuarios;
-}
+    return { usuarios: Object.keys(this.usuarios) }; 
+};
 this.usuarioActivo = function (nick) {
-    return !!this.usuarios[nick]; // Devuelve true si el usuario existe, false en caso contrario
+    return { activo: !!this.usuarios[nick] }; 
 };
 this.numeroUsuarios = function () {
-    return Object.keys(this.usuarios).length; // Cuenta las claves en el objeto usuarios
-};
-        
-        
+    let res = { total: Object.keys(this.usuarios).length };
+    return res;
+}
 }
 function Usuario(nick) {
     this.nick = nick;

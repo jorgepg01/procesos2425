@@ -27,18 +27,18 @@ app.get("/obtenerUsuarios", function (request, response) {
 app.get("/usuarioActivo/:nick", function (request, response) {
     let nick = request.params.nick;
     let res = sistema.usuarioActivo(nick);
-    response.send({ activo: res });
+    response.send(res);
 });
 
 app.get("/numeroUsuarios", function (request, response) {
     let res = sistema.numeroUsuarios();
-    response.send({ numeroUsuarios: res });
+    response.send(res);
 });
 
 app.get("/eliminarUsuario/:nick", function (request, response) {
     let nick = request.params.nick;
     let res = sistema.eliminarUsuario(nick);  
-    response.send({ eliminado: nick });
+    response.send(res);
 });
 
 app.listen(PORT, () => {
