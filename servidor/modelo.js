@@ -26,13 +26,13 @@ this.eliminarUsuario = function (nick) {
     return res;
 }
 this.obtenerUsuarios = function () {
-    return { usuarios: Object.keys(this.usuarios) }; 
+    return {usuarios: Object.keys(this.usuarios) }; 
 };
 this.usuarioActivo = function (nick) {
-    return { activo: !!this.usuarios[nick] }; 
+    return {activo: !!this.usuarios[nick] }; 
 };
 this.numeroUsuarios = function () {
-    let res = { total: Object.keys(this.usuarios).length };
+    let res = {total: Object.keys(this.usuarios).length };
     return res;
 }
 }
